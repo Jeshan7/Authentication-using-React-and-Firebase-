@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Card, Container } from 'react-bootstrap';
+import AuthContext from '../../context/authContext';
 
-const Home = () => {
+const Home = (props) => {
+  const authContext = useContext(AuthContext);
+
+  // console.log(authContext);
   return (
     <div>
-      <p>hello</p>    
+      <Container>
+        <Card>
+          <Card.Body>
+            User Logged In: {authContext}
+          </Card.Body>
+        </Card> 
+      </Container> 
     </div>
   );       
 }

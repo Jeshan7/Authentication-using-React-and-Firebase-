@@ -17,7 +17,6 @@ class Login extends Component {
 
   submitHandler = (e) => {
     e.preventDefault();
-    console.log(this.state);
     fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
     .then( (cred) => {
     //   console.log(this.props);
